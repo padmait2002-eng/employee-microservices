@@ -11,6 +11,7 @@ A full-stack employee management application with an in-memory database built wi
 | **Just want to run it?** | [QUICKSTART.md](QUICKSTART.md) | 5 min |
 | **Want to test APIs?** | [API_TESTING.md](API_TESTING.md) | 10 min |
 | **Want to extend it?** | [DEVELOPMENT.md](DEVELOPMENT.md) | 30 min |
+| **Want to understand security?** | [SECURITY.md](SECURITY.md) | 15 min |
 | **Full documentation?** | This file (README.md) | 20 min |
 
 ---
@@ -32,6 +33,14 @@ A full-stack employee management application with an in-memory database built wi
 - Formatted salary display
 - Employee count display
 - Empty state message
+
+🔒 **Security Features:**
+- Spring Security framework enabled
+- CORS properly configured and centralized
+- Stateless REST API session management
+- Security headers (X-Frame-Options, etc.)
+- BCrypt password encoding ready for authentication
+- Ready for JWT/OAuth2 implementation
 
 ## Project Structure
 
@@ -197,7 +206,13 @@ The build folder will contain the optimized production build.
 ## Troubleshooting
 
 ### CORS Errors
-If you see CORS errors, ensure the backend is running and the frontend is configured to use `http://localhost:8080` for API calls.
+If you see CORS errors, ensure:
+1. Backend is running on `http://localhost:8080`
+2. Frontend is running on `http://localhost:3000`
+3. CORS is properly configured in `SecurityConfig.java`
+4. Check browser console for specific CORS error messages
+
+For security details, see [SECURITY.md](SECURITY.md)
 
 ### Port Already in Use
 - **Backend (Port 8080)**: Change in `src/main/resources/application.properties`
@@ -230,6 +245,7 @@ npm install --save axios
 | **QUICKSTART.md** | 5-minute setup and run guide |
 | **API_TESTING.md** | API endpoint testing with cURL, Postman, JavaScript examples |
 | **DEVELOPMENT.md** | Developer guide for extending features, adding database, testing |
+| **SECURITY.md** | Security configuration, best practices, and production recommendations |
 
 ## License
 
